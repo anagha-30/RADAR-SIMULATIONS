@@ -18,7 +18,7 @@ f=100e6;
 y = 2*sin(2*pi*f*t)
 x = fftshift(fft(y))
 xmag = abs(x);
-df = -1e3/2::1e3/2;
+df = -1e3/2:1:1e3/2;
 
 subplot(3,1,1)
 plot(t,y)
