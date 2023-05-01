@@ -18,7 +18,7 @@ for i=1:length(t)
   fi = [fi fi]
   fi = 500e11*t
 end
-y = sin(pi*t*fi)
+y = sin(pi*t.*fi)
   
 subplot(3,1,1)
 plot(t,y);
@@ -27,7 +27,7 @@ ylabel('Magnitude');
 title('Chirp');
 w = 0:1:1e3;
 subplot(3,1,2)
-plot(w*1e6,abs(fft(x));
+plot(w*1e6,abs(fft(y)));
 xlabel('Frequency');
 ylabel('Power(mag)');
 title('Power Spectral Density');
